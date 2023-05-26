@@ -345,6 +345,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 			driver.switchTo().defaultContent();
 			Thread.sleep(2000);
 			driver.findElement(closeaskingquestion).click();
+			System.out.println("Closed asking a question Screen");
 		}
 		
 		
