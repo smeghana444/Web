@@ -288,6 +288,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
         	Thread.sleep(10000);
         	String twitter=driver.getTitle();
         	System.out.println(twitter);
+        	driver.close();
         	driver.switchTo().window(tabs.get(1));
         	driver.findElement(closecard).click();
 		}
@@ -306,7 +307,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
             {
 				WebElement previouscard=driver.findElement(previoussocialcard);
                 String pcardname = previouscard.getText();
-                System.out.println("Naviagte to quick reads previous card: "+pcardname);
+                System.out.println("Naviagte to social  previous card: "+pcardname);
                 Thread.sleep(2000);
                 previouscard.click();
                              
@@ -315,7 +316,7 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
             {
 				WebElement nextcard=driver.findElement(nextsocialcard);
                 String ncardname = nextcard.getText();
-                System.out.println("Naviagte to quick reads next card: "+ncardname);
+                System.out.println("Naviagte to social next card: "+ncardname);
                 Thread.sleep(2000);
                 nextcard.click();
                              
